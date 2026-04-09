@@ -1,83 +1,30 @@
+// ========== ЛОКАЛЬНЫЙ AI (НЕ НУЖЕН API КЛЮЧ) ==========
 async function askDeepSeek(prompt) {
     const p = prompt.toLowerCase();
     
-    // Свадебная съемка
-    if (p.includes('свадьб') || p.includes('wedding') || p.includes('венчание') || p.includes('женить')) {
-        return "💍 Свадебная фотосъемка — от 25 000 ₽. Входит: полный день (до 10 часов), 300+ обработанных фото, подарочный фотоальбом, предсвадебная консультация. Забронировать дату можно через форму на сайте! 📸";
+    if (p.includes('свадьб') || p.includes('wedding')) {
+        return "💍 Свадебная фотосъемка — от 25 000 ₽. Полный день, 300+ фото, фотоальбом в подарок!";
+    }
+    if (p.includes('портрет') || p.includes('portrait')) {
+        return "✨ Портретная съемка — от 8 000 ₽. В студии или на природе, профессиональный грим.";
+    }
+    if (p.includes('семейн') || p.includes('family')) {
+        return "👨‍👩‍👧‍👦 Семейная съемка — от 12 000 ₽. Теплые и естественные фото.";
+    }
+    if (p.includes('цен') || p.includes('price') || p.includes('сколько стоит')) {
+        return "💰 Цены: Свадебная — от 25 000 ₽, Портретная — от 8 000 ₽, Семейная — от 12 000 ₽.";
+    }
+    if (p.includes('контакт') || p.includes('телефон')) {
+        return "📞 Связаться: +7 (914) 123-45-67, Telegram, WhatsApp, или форма на сайте.";
+    }
+    if (p.includes('адрес') || p.includes('студия')) {
+        return "📍 Студия: г. Якутск, ул. Ленина, 25, БЦ 'Северный', 3 этаж.";
+    }
+    if (p.includes('привет') || p.includes('здравствуй')) {
+        return "👋 Привет! Я AI-помощник. Что тебя интересует? Свадебная, портретная или семейная съемка?";
     }
     
-    // Портретная съемка
-    if (p.includes('портрет') || p.includes('portrait') || p.includes('индивидуальн') || p.includes('фотосесси')) {
-        return "✨ Портретная съемка — от 8 000 ₽. В студии или на природе. Входит: профессиональный грим, 2-3 часа съемки, 50+ фото, несколько смен образов. Запишись через форму в разделе 'Контакты'! 📷";
-    }
-    
-    // Семейная съемка
-    if (p.includes('семейн') || p.includes('family') || p.includes('дети') || p.includes('ребен') || p.includes('мама') || p.includes('папа')) {
-        return "👨‍👩‍👧‍👦 Семейная фотосъемка — от 12 000 ₽. Теплые и естественные фото в уютной обстановке. Входит: 2-3 часа съемки, 80+ фото, семейный фотоальбом. Запланировать можно через форму на сайте!";
-    }
-    
-    // Коммерческая съемка
-    if (p.includes('коммерческ') || p.includes('commercial') || p.includes('бренд') || p.includes('товар') || p.includes('реклам')) {
-        return "🏢 Коммерческая съемка — от 15 000 ₽. Для брендов, товаров, ресторанов. Обсуждается индивидуально. Свяжись со мной для деталей!";
-    }
-    
-    // Цены
-    if (p.includes('цен') || p.includes('price') || p.includes('сколько стоит') || p.includes('прайс') || p.includes('стоимость')) {
-        return "💰 Цены на услуги:\n• Свадебная — от 25 000 ₽\n• Портретная — от 8 000 ₽\n• Семейная — от 12 000 ₽\n• Коммерческая — от 15 000 ₽\n\nПодробное описание каждой услуги в разделе 'Услуги'!";
-    }
-    
-    // Контакты
-    if (p.includes('контакт') || p.includes('связаться') || p.includes('телефон') || p.includes('phone') || p.includes('позвонить') || p.includes('написать')) {
-        return "📞 Связаться со мной:\n• Телефон: +7 (914) 123-45-67\n• Email: photo@yakutia.ru\n• Telegram: @photo_yakutia\n• WhatsApp: +7 (914) 123-45-67\n\nИли заполни форму в разделе 'Контакты' — я отвечу в течение часа!";
-    }
-    
-    // Адрес студии
-    if (p.includes('адрес') || p.includes('где находитесь') || p.includes('студия') || p.includes('приехать')) {
-        return "📍 Студия находится по адресу: г. Якутск, ул. Ленина, 25, БЦ 'Северный', 3 этаж. Вход через центральную арку. Работаю также на выезде по всему городу!";
-    }
-    
-    // Режим работы
-    if (p.includes('часы работы') || p.includes('режим') || p.includes('когда работаете') || p.includes('график')) {
-        return "⏰ Режим работы:\n• Пн-Пт: 9:00 - 18:00\n• Сб: 10:00 - 16:00\n• Вс: выходной\n\nПри необходимости могу выехать в другое время по договоренности!";
-    }
-    
-    // Портфолио
-    if (p.includes('портфоли') || p.includes('примеры') || p.includes('работы') || p.includes('галерея') || p.includes('посмотреть')) {
-        return "📷 Примеры моих работ можно посмотреть в разделе 'Портфолио'. Там есть свадебные, портретные, семейные и коммерческие съемки. Выбери категорию, которая тебя интересует!";
-    }
-    
-    // О фотографе
-    if (p.includes('фотограф') || p.includes('опыт') || p.includes('обо мне') || p.includes('кто вы') || p.includes('алексей')) {
-        return "👨‍🎤 Меня зовут Алексей, я профессиональный фотограф из Якутска с 7-летним опытом. Специализируюсь на эмоциональных и атмосферных фото. Мой стиль — современные техники + якутский колорит! Работаю с 2018 года.";
-    }
-    
-    // Якутск
-    if (p.includes('якутск') || p.includes('yakutsk') || p.includes('якутия') || p.includes('саха')) {
-        return "❄️ Якутск — город контрастов! Летом белые ночи, зимой до -50°C. Я работаю здесь уже 7 лет и знаю самые красивые места для съемок — от Ленских столбов до национальных парков. Фотографии получаются уникальными! 🏔️";
-    }
-    
-    // Скидки
-    if (p.includes('скидк') || p.includes('акци') || p.includes('discount') || p.includes('выгодно')) {
-        return "🎁 Акции и скидки:\n• При заказе двух услуг — скидка 10%\n• Для молодожёнов — свадебный альбом в подарок\n• Студентам — скидка 15% по студенческому\n• Повторным клиентам — скидка 20%";
-    }
-    
-    // Как заказать
-    if (p.includes('заказать') || p.includes('записаться') || p.includes('book') || p.includes('забронировать')) {
-        return "📝 Чтобы заказать съемку:\n1. Выбери услугу в разделе 'Услуги'\n2. Заполни форму в разделе 'Контакты'\n3. Я свяжусь с тобой в течение часа\n\nИли сразу напиши в Telegram/WhatsApp: +7 (914) 123-45-67";
-    }
-    
-    // Приветствие
-    if (p.includes('привет') || p.includes('здравствуй') || p.includes('добрый день') || p.includes('hi') || p.includes('hello') || p.includes('здарова')) {
-        return "👋 Привет-привет! Я AI-помощник фотографа Алексея. Рад видеть тебя на сайте! Расскажи, что тебя интересует: свадебная, портретная или семейная фотосессия? Или хочешь узнать цены? Я помогу выбрать идеальный вариант! 📸";
-    }
-    
-    // Спасибо
-    if (p.includes('спасиб') || p.includes('thanks')) {
-        return "🙏 Пожалуйста! Обращайся, если будут ещё вопросы. Буду рад помочь с выбором идеальной фотосессии! Хорошего дня! 😊";
-    }
-    
-    // Ответ по умолчанию
-    return "📸 Спасибо за вопрос! Я пока не совсем понял, что ты хочешь узнать. Вот что я могу:\n\n• Рассказать об услугах и ценах\n• Дать контакты и адрес студии\n• Показать портфолио\n• Рассказать о скидках\n\nНапиши конкретнее, например: 'сколько стоит свадьба' или 'где находится студия'. Или свяжись со мной в Telegram: +7 (914) 123-45-67";
+    return "📸 Спасибо за вопрос! Посмотри раздел 'Услуги' или заполни форму в 'Контактах' — я отвечу!";
 }
 
 // ========== ПЕРЕВОД ЯЗЫКОВ ==========
@@ -132,7 +79,6 @@ function createParticles() {
     }
 }
 
-// ========== СКРОЛЛ ПРОГРЕСС ==========
 function updateScrollProgress() {
     const scrollProgress = document.getElementById('scrollProgress');
     const scrollTop = document.documentElement.scrollTop;
@@ -140,7 +86,6 @@ function updateScrollProgress() {
     scrollProgress.style.width = `${(scrollTop / scrollHeight) * 100}%`;
 }
 
-// ========== АНИМАЦИЯ СЧЁТЧИКОВ ==========
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-item h3');
     counters.forEach(counter => {
@@ -153,7 +98,6 @@ function animateCounters() {
     });
 }
 
-// ========== АНИМАЦИЯ ПРИ СКРОЛЛЕ ==========
 function handleScrollAnimations() {
     document.querySelectorAll('section').forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -164,7 +108,6 @@ function handleScrollAnimations() {
     });
 }
 
-// ========== КНОПКА НАВЕРХ ==========
 function handleBackToTop() {
     const btn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => btn.classList.toggle('show', window.pageYOffset > 300));
@@ -216,14 +159,6 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-// ========== ФОРМА ОБРАТНОЙ СВЯЗИ ==========
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const messages = { ru: 'Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.', en: 'Thank you for your message! I will contact you soon.', sah: 'Суругуҥ иһин махтал! Мин эйигин чугас кэмҥэ ситимнэһиэм.' };
-    alert(messages[currentLanguage]);
-    this.reset();
-});
-
 // ========== ПЛАВНАЯ НАВИГАЦИЯ ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -239,7 +174,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== HEADER ПРИ СКРОЛЛЕ ==========
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     header.classList.toggle('scrolled', window.scrollY > 100);
@@ -310,7 +244,7 @@ function addAIChatWidget() {
                     </div>
                 </div>
                 <div id="aiChatMessages" style="height: 350px; overflow-y: auto; padding: 15px; background: #f8f9fa;">
-                    <div class="ai-message ai-bot"><div style="background: white; padding: 12px 15px; border-radius: 18px; border-top-left-radius: 4px; display: inline-block; max-width: 85%; font-size: 14px;">Привет! 👋 Я AI-помощник. Могу рассказать об услугах, подобрать концепцию съемки или просто поболтать. Спрашивай!</div></div>
+                    <div class="ai-message ai-bot"><div style="background: white; padding: 12px 15px; border-radius: 18px; border-top-left-radius: 4px; display: inline-block; max-width: 85%; font-size: 14px;">Привет! 👋 Я AI-помощник. Могу рассказать об услугах, подобрать концепцию съемки. Спрашивай!</div></div>
                 </div>
                 <div style="padding: 15px; border-top: 1px solid #eee; background: white; display: flex; gap: 10px;">
                     <input type="text" id="aiChatInput" placeholder="Напиши вопрос..." style="flex: 1; padding: 12px 15px; border: 1px solid #e0e0e0; border-radius: 25px; font-family: inherit; font-size: 14px; outline: none;">
