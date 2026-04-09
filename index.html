@@ -186,14 +186,50 @@
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3 data-lang-ru="Email" data-lang-en="Email" data-lang-sah="Email">Email</h3><p>photo@yakutia.ru<br>alexey@yakutia.ru</p></div></div>
                     <div class="contact-item"><div class="contact-icon"><i class="fas fa-clock"></i></div><div class="contact-details"><h3 data-lang-ru="Часы работы" data-lang-en="Working Hours" data-lang-sah="Үлэлии кэмэ">Часы работы</h3><p data-lang-ru="Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Вс: выходной" data-lang-en="Mon-Fri: 9:00 - 18:00<br>Sat: 10:00 - 16:00<br>Sun: Closed" data-lang-sah="Бн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Бс: сынньалаҥ">Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 16:00<br>Вс: выходной</p></div></div>
                 </div>
+                
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group"><label for="name" data-lang-ru="Ваше имя" data-lang-en="Your Name" data-lang-sah="Эн аатыҥ">Ваше имя</label><input type="text" id="name" class="form-control" placeholder="Иван Иванов" required></div>
-                        <div class="form-group"><label for="email" data-lang-ru="Email" data-lang-en="Email" data-lang-sah="Email">Email</label><input type="email" id="email" class="form-control" placeholder="ivan@example.com" required></div>
-                        <div class="form-group"><label for="phone" data-lang-ru="Телефон" data-lang-en="Phone" data-lang-sah="Телефон">Телефон</label><input type="tel" id="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX"></div>
-                        <div class="form-group"><label for="service" data-lang-ru="Услуга" data-lang-en="Service" data-lang-sah="Үлэ">Услуга</label><select id="service" class="form-control"><option value="" data-lang-ru="Выберите услугу" data-lang-en="Select a service" data-lang-sah="Үлэни тал">Выберите услугу</option><option value="wedding" data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</option><option value="portrait" data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</option><option value="family" data-lang-ru="Семейная фотосъемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</option><option value="commercial" data-lang-ru="Коммерческая съемка" data-lang-en="Commercial photography" data-lang-sah="Эргиэн уруһуйдааһын">Коммерческая съемка</option><option value="other" data-lang-ru="Другое" data-lang-en="Other" data-lang-sah="Атын">Другое</option></select></div>
-                        <div class="form-group"><label for="message" data-lang-ru="Сообщение" data-lang-en="Message" data-lang-sah="Сурук">Сообщение</label><textarea id="message" class="form-control" placeholder="Расскажите о вашем проекте..." rows="5" required></textarea></div>
-                        <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-paper-plane"></i> <span data-lang-ru="Отправить сообщение" data-lang-en="Send Message" data-lang-sah="Суругу ыыт">Отправить сообщение</span></button>
+                    <form id="contactForm" action="https://formsubmit.co/jjxzty@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="📸 НОВАЯ ЗАЯВКА с сайта ФотоЯкутия!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_ip" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_autoresponse" value="Спасибо за обращение! 📸 Я свяжусь с вами в ближайшее время. Хорошего дня!">
+                        
+                        <div class="form-group">
+                            <label for="name" data-lang-ru="Ваше имя" data-lang-en="Your Name" data-lang-sah="Эн аатыҥ">Ваше имя</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Иван Иванов" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-lang-ru="Email" data-lang-en="Email" data-lang-sah="Email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="ivan@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-lang-ru="Телефон" data-lang-en="Phone" data-lang-sah="Телефон">Телефон</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" data-lang-ru="Услуга" data-lang-en="Service" data-lang-sah="Үлэ">Услуга</label>
+                            <select id="service" name="service" class="form-control">
+                                <option value="Свадебная фотосъемка" data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</option>
+                                <option value="Портретная фотосъемка" data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</option>
+                                <option value="Семейная фотосъемка" data-lang-ru="Семейная фотосъемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</option>
+                                <option value="Коммерческая съемка" data-lang-ru="Коммерческая съемка" data-lang-en="Commercial photography" data-lang-sah="Эргиэн уруһуйдааһын">Коммерческая съемка</option>
+                                <option value="Другое" data-lang-ru="Другое" data-lang-en="Other" data-lang-sah="Атын">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-lang-ru="Сообщение" data-lang-en="Message" data-lang-sah="Сурук">Сообщение</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Расскажите о вашем проекте..." rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-lang-ru="Отправить сообщение" data-lang-en="Send Message" data-lang-sah="Суругу ыыт">Отправить сообщение</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -213,6 +249,21 @@
     </footer>
 
     <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Tawk.to Чат (добавлено) -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69d7432f66239b1c36ac7780/1jlodssrb';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <script src="script.js"></script>
 </body>
