@@ -10,6 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .portfolio-img, .service-img img, .about-img img, .testimonial-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        .service-img {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .author-avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .hero {
+            background: linear-gradient(rgba(26, 42, 58, 0.7), rgba(26, 42, 58, 0.8)), url('img/photographer-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -21,26 +66,11 @@
         </div>
         <h3 class="accessibility-title" data-lang-ru="Доступность" data-lang-en="Accessibility" data-lang-sah="Доступнас">Доступность</h3>
         <div class="accessibility-options">
-            <button class="accessibility-btn" id="normalText">
-                <i class="fas fa-text-height"></i>
-                <span data-lang-ru="Обычный текст" data-lang-en="Normal text" data-lang-sah="Дьиҥнээх тиэкис">Обычный текст</span>
-            </button>
-            <button class="accessibility-btn" id="largeText">
-                <i class="fas fa-text-height"></i>
-                <span data-lang-ru="Крупный текст" data-lang-en="Large text" data-lang-sah="Улахан тиэкис">Крупный текст</span>
-            </button>
-            <button class="accessibility-btn" id="extraLargeText">
-                <i class="fas fa-text-height"></i>
-                <span data-lang-ru="Очень крупный текст" data-lang-en="Extra large text" data-lang-sah="Олус улахан тиэкис">Очень крупный текст</span>
-            </button>
-            <button class="accessibility-btn" id="highContrast">
-                <i class="fas fa-adjust"></i>
-                <span data-lang-ru="Высокая контрастность" data-lang-en="High contrast" data-lang-sah="Үрдүк контраст">Высокая контрастность</span>
-            </button>
-            <button class="accessibility-btn" id="resetAccessibility">
-                <i class="fas fa-undo"></i>
-                <span data-lang-ru="Сбросить настройки" data-lang-en="Reset settings" data-lang-sah="Туруоруулары уларыт">Сбросить настройки</span>
-            </button>
+            <button class="accessibility-btn" id="normalText"><i class="fas fa-text-height"></i> <span data-lang-ru="Обычный текст" data-lang-en="Normal text" data-lang-sah="Дьиҥнээх тиэкис">Обычный текст</span></button>
+            <button class="accessibility-btn" id="largeText"><i class="fas fa-text-height"></i> <span data-lang-ru="Крупный текст" data-lang-en="Large text" data-lang-sah="Улахан тиэкис">Крупный текст</span></button>
+            <button class="accessibility-btn" id="extraLargeText"><i class="fas fa-text-height"></i> <span data-lang-ru="Очень крупный текст" data-lang-en="Extra large text" data-lang-sah="Олус улахан тиэкис">Очень крупный текст</span></button>
+            <button class="accessibility-btn" id="highContrast"><i class="fas fa-adjust"></i> <span data-lang-ru="Высокая контрастность" data-lang-en="High contrast" data-lang-sah="Үрдүк контраст">Высокая контрастность</span></button>
+            <button class="accessibility-btn" id="resetAccessibility"><i class="fas fa-undo"></i> <span data-lang-ru="Сбросить настройки" data-lang-en="Reset settings" data-lang-sah="Туруоруулары уларыт">Сбросить настройки</span></button>
         </div>
     </div>
 
@@ -48,8 +78,8 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <img src="img/ssss.png" alt="ФотоЯкутия" class="logo-img">
-                    <div class="logo-text" data-lang-ru="ФотоЯкутия" data-lang-en="PhotoYakutia" data-lang-sah="ФотоДьокуускай">ФотоЯкутия</div>
+                    <img src="img/ssss.png" alt="ЯкутскийСвет" class="logo-img">
+                    <div class="logo-text" data-lang-ru="ЯкутскийСвет" data-lang-en="YakutLight" data-lang-sah="СахаСырдыга">ЯкутскийСвет</div>
                 </a>
                 <div class="nav-right">
                     <ul class="nav-links">
@@ -61,11 +91,7 @@
                         <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-lang-ru="Контакты" data-lang-en="Contact" data-lang-sah="Ситим">Контакты</span></a></li>
                     </ul>
                     <div class="language-switcher">
-                        <button class="language-btn" id="languageBtn">
-                            <i class="fas fa-globe"></i>
-                            <span id="currentLanguage">Русский</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+                        <button class="language-btn" id="languageBtn"><i class="fas fa-globe"></i> <span id="currentLanguage">Русский</span> <i class="fas fa-chevron-down"></i></button>
                         <div class="language-dropdown" id="languageDropdown">
                             <div class="language-option active" data-lang="ru"><i class="fas fa-check"></i> Русский</div>
                             <div class="language-option" data-lang="en">English</div>
@@ -101,6 +127,7 @@
         </div>
     </section>
 
+    <!-- ========== ПОРТФОЛИО (ПУСТАЯ СЕТКА - ЗАПОЛНЯЕТСЯ JS) ========== -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -115,10 +142,11 @@
                 <button class="filter-btn" data-filter="family" data-lang-ru="Семейные" data-lang-en="Family" data-lang-sah="Дьиэ кэргэннээх">Семейные</button>
                 <button class="filter-btn" data-filter="commercial" data-lang-ru="Коммерческие" data-lang-en="Commercial" data-lang-sah="Эргиэн">Коммерческие</button>
             </div>
-            <div class="portfolio-grid"></div>
+            <div class="portfolio-grid"></div> <!-- Сюда JS добавит карточки -->
         </div>
     </section>
 
+    <!-- ========== УСЛУГИ ========== -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -127,9 +155,56 @@
                 <p data-lang-ru="Профессиональная фотосъемка для разных случаев" data-lang-en="Professional photography for different occasions" data-lang-sah="Араас түгэннэргэ идэтийбит уруһуйдааһын">Профессиональная фотосъемка для разных случаев</p>
             </div>
             <div class="services-grid">
-                <div class="service-card"><div class="service-img">Тут будет фото</div><div class="service-content"><h3 data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding Photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</h3><p data-lang-ru="Полное сопровождение вашего особенного дня. От подготовки до первого танца." data-lang-en="Full coverage of your special day. From preparation to the first dance." data-lang-sah="Эн ураты күнүҥ толору көрүү. Бэлэмнэнииттэн бастакы үҥкүүгэ дылы.">Полное сопровождение вашего особенного дня. От подготовки до первого танца.</p><ul class="service-features"><li data-lang-ru="Предсвадебная консультация" data-lang-en="Pre-wedding consultation" data-lang-sah="Кэргэнниир иннинээҕи кэнсиэлээһин">Предсвадебная консультация</li><li data-lang-ru="Полный день съемки (до 10 часов)" data-lang-en="Full day shooting (up to 10 hours)" data-lang-sah="Толору күн уруһуйдааһын (10 чаас дылы)">Полный день съемки (до 10 часов)</li><li data-lang-ru="Обработка 300+ фотографий" data-lang-en="Processing 300+ photos" data-lang-sah="300+ хаартыска обработката">Обработка 300+ фотографий</li><li data-lang-ru="Подарочный фотоальбом" data-lang-en="Gift photo album" data-lang-sah="Бэлэх фотоальбом">Подарочный фотоальбом</li><li data-lang-ru="Все исходные материалы" data-lang-en="All source materials" data-lang-sah="Бары бастааҥҥы матырыйааллар">Все исходные материалы</li></ul><div class="service-price" data-lang-ru="от 25 000 ₽" data-lang-en="from 25 000 RUB" data-lang-sah="25 000 ₽ кыра">от 25 000 ₽</div><a href="#contact" class="btn"><i class="fas fa-calendar-plus"></i> <span data-lang-ru="Забронировать дату" data-lang-en="Book a Date" data-lang-sah="Датаны броньнаа">Забронировать дату</span></a></div></div>
-                <div class="service-card"><div class="service-img">Тут будет фото</div><div class="service-content"><h3 data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait Photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</h3><p data-lang-ru="Индивидуальные и групповые портреты в студии или на природе." data-lang-en="Individual and group portraits in studio or outdoors." data-lang-sah="Индивидуальнай уонна бөлөх портреттар студияҕа эбэтэр таһырдьа.">Индивидуальные и групповые портреты в студии или на природе.</p><ul class="service-features"><li data-lang-ru="Профессиональный грим и стилизация" data-lang-en="Professional makeup and styling" data-lang-sah="Идэтийбит грим уонна стилизация">Профессиональный грим и стилизация</li><li data-lang-ru="2-3 часа съемки" data-lang-en="2-3 hours shooting" data-lang-sah="2-3 чаас уруһуйдааһын">2-3 часа съемки</li><li data-lang-ru="Обработка 50+ фотографий" data-lang-en="Processing 50+ photos" data-lang-sah="50+ хаартыска обработката">Обработка 50+ фотографий</li><li data-lang-ru="Несколько смен образов" data-lang-en="Multiple outfit changes" data-lang-sah="Хас да уобарас уларытыы">Несколько смен образов</li><li data-lang-ru="Цифровые и печатные варианты" data-lang-en="Digital and print options" data-lang-sah="Цифровой уонна бэчээттээһин варианнара">Цифровые и печатные варианты</li></ul><div class="service-price" data-lang-ru="от 8 000 ₽" data-lang-en="from 8 000 RUB" data-lang-sah="8 000 ₽ кыра">от 8 000 ₽</div><a href="#contact" class="btn"><i class="fas fa-user-plus"></i> <span data-lang-ru="Записаться на съемку" data-lang-en="Book a Session" data-lang-sah="Уруһуйдааһыҥҥа суруттар">Записаться на съемку</span></a></div></div>
-                <div class="service-card"><div class="service-img">Тут будет фото</div><div class="service-content"><h3 data-lang-ru="Семейная фотосъемка" data-lang-en="Family Photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</h3><p data-lang-ru="Теплые и естественные фотографии вашей семьи в уютной обстановке." data-lang-en="Warm and natural photos of your family in a cozy setting." data-lang-sah="Эн дьиэ кэргэниҥ итиилээх уонна чэпчэки хаартыскалара.">Теплые и естественные фотографии вашей семьи в уютной обстановке.</p><ul class="service-features"><li data-lang-ru="Съемка в студии или на выезде" data-lang-en="Shooting in studio or on location" data-lang-sah="Студияҕа эбэтэр таһырдьа уруһуйдааһын">Съемка в студии или на выезде</li><li data-lang-ru="2-3 часа съемки" data-lang-en="2-3 hours shooting" data-lang-sah="2-3 чаас уруһуйдааһын">2-3 часа съемки</li><li data-lang-ru="Обработка 80+ фотографий" data-lang-en="Processing 80+ photos" data-lang-sah="80+ хаартыска обработката">Обработка 80+ фотографий</li><li data-lang-ru="Семейный фотоальбом" data-lang-en="Family photo album" data-lang-sah="Дьиэ кэргэн фотоальбома">Семейный фотоальбом</li><li data-lang-ru="Индивидуальные и групповые фото" data-lang-en="Individual and group photos" data-lang-sah="Индивидуальнай уонна бөлөх хаартыскалар">Индивидуальные и групповые фото</li></ul><div class="service-price" data-lang-ru="от 12 000 ₽" data-lang-en="from 12 000 RUB" data-lang-sah="12 000 ₽ кыра">от 12 000 ₽</div><a href="#contact" class="btn"><i class="fas fa-users"></i> <span data-lang-ru="Запланировать съемку" data-lang-en="Schedule a Session" data-lang-sah="Уруһуйдааһыны былааннаа">Запланировать съемку</span></a></div></div>
+                <div class="service-card">
+                    <div class="service-img"><i class="fas fa-heart" style="font-size: 3rem;"></i></div>
+                    <div class="service-content">
+                        <h3 data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding Photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</h3>
+                        <p data-lang-ru="Полное сопровождение вашего особенного дня. От подготовки до первого танца." data-lang-en="Full coverage of your special day. From preparation to the first dance." data-lang-sah="Эн ураты күнүҥ толору көрүү. Бэлэмнэнииттэн бастакы үҥкүүгэ дылы.">Полное сопровождение вашего особенного дня. От подготовки до первого танца.</p>
+                        <ul class="service-features">
+                            <li data-lang-ru="Предсвадебная консультация" data-lang-en="Pre-wedding consultation" data-lang-sah="Кэргэнниир иннинээҕи кэнсиэлээһин">Предсвадебная консультация</li>
+                            <li data-lang-ru="Полный день съемки (до 10 часов)" data-lang-en="Full day shooting (up to 10 hours)" data-lang-sah="Толору күн уруһуйдааһын (10 чаас дылы)">Полный день съемки (до 10 часов)</li>
+                            <li data-lang-ru="Обработка 300+ фотографий" data-lang-en="Processing 300+ photos" data-lang-sah="300+ хаартыска обработката">Обработка 300+ фотографий</li>
+                            <li data-lang-ru="Подарочный фотоальбом" data-lang-en="Gift photo album" data-lang-sah="Бэлэх фотоальбом">Подарочный фотоальбом</li>
+                            <li data-lang-ru="Все исходные материалы" data-lang-en="All source materials" data-lang-sah="Бары бастааҥҥы матырыйааллар">Все исходные материалы</li>
+                        </ul>
+                        <div class="service-price" data-lang-ru="от 25 000 ₽" data-lang-en="from 25 000 RUB" data-lang-sah="25 000 ₽ кыра">от 25 000 ₽</div>
+                        <a href="#contact" class="btn"><i class="fas fa-calendar-plus"></i> <span data-lang-ru="Забронировать дату" data-lang-en="Book a Date" data-lang-sah="Датаны броньнаа">Забронировать дату</span></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img"><i class="fas fa-user" style="font-size: 3rem;"></i></div>
+                    <div class="service-content">
+                        <h3 data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait Photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</h3>
+                        <p data-lang-ru="Индивидуальные и групповые портреты в студии или на природе." data-lang-en="Individual and group portraits in studio or outdoors." data-lang-sah="Индивидуальнай уонна бөлөх портреттар студияҕа эбэтэр таһырдьа.">Индивидуальные и групповые портреты в студии или на природе.</p>
+                        <ul class="service-features">
+                            <li data-lang-ru="Профессиональный грим и стилизация" data-lang-en="Professional makeup and styling" data-lang-sah="Идэтийбит грим уонна стилизация">Профессиональный грим и стилизация</li>
+                            <li data-lang-ru="2-3 часа съемки" data-lang-en="2-3 hours shooting" data-lang-sah="2-3 чаас уруһуйдааһын">2-3 часа съемки</li>
+                            <li data-lang-ru="Обработка 50+ фотографий" data-lang-en="Processing 50+ photos" data-lang-sah="50+ хаартыска обработката">Обработка 50+ фотографий</li>
+                            <li data-lang-ru="Несколько смен образов" data-lang-en="Multiple outfit changes" data-lang-sah="Хас да уобарас уларытыы">Несколько смен образов</li>
+                            <li data-lang-ru="Цифровые и печатные варианты" data-lang-en="Digital and print options" data-lang-sah="Цифровой уонна бэчээттээһин варианнара">Цифровые и печатные варианты</li>
+                        </ul>
+                        <div class="service-price" data-lang-ru="от 8 000 ₽" data-lang-en="from 8 000 RUB" data-lang-sah="8 000 ₽ кыра">от 8 000 ₽</div>
+                        <a href="#contact" class="btn"><i class="fas fa-user-plus"></i> <span data-lang-ru="Записаться на съемку" data-lang-en="Book a Session" data-lang-sah="Уруһуйдааһыҥҥа суруттар">Записаться на съемку</span></a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img"><i class="fas fa-users" style="font-size: 3rem;"></i></div>
+                    <div class="service-content">
+                        <h3 data-lang-ru="Семейная фотосъемка" data-lang-en="Family Photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</h3>
+                        <p data-lang-ru="Теплые и естественные фотографии вашей семьи в уютной обстановке." data-lang-en="Warm and natural photos of your family in a cozy setting." data-lang-sah="Эн дьиэ кэргэниҥ итиилээх уонна чэпчэки хаартыскалара.">Теплые и естественные фотографии вашей семьи в уютной обстановке.</p>
+                        <ul class="service-features">
+                            <li data-lang-ru="Съемка в студии или на выезде" data-lang-en="Shooting in studio or on location" data-lang-sah="Студияҕа эбэтэр таһырдьа уруһуйдааһын">Съемка в студии или на выезде</li>
+                            <li data-lang-ru="2-3 часа съемки" data-lang-en="2-3 hours shooting" data-lang-sah="2-3 чаас уруһуйдааһын">2-3 часа съемки</li>
+                            <li data-lang-ru="Обработка 80+ фотографий" data-lang-en="Processing 80+ photos" data-lang-sah="80+ хаартыска обработката">Обработка 80+ фотографий</li>
+                            <li data-lang-ru="Семейный фотоальбом" data-lang-en="Family photo album" data-lang-sah="Дьиэ кэргэн фотоальбома">Семейный фотоальбом</li>
+                            <li data-lang-ru="Индивидуальные и групповые фото" data-lang-en="Individual and group photos" data-lang-sah="Индивидуальнай уонна бөлөх хаартыскалар">Индивидуальные и групповые фото</li>
+                        </ul>
+                        <div class="service-price" data-lang-ru="от 12 000 ₽" data-lang-en="from 12 000 RUB" data-lang-sah="12 000 ₽ кыра">от 12 000 ₽</div>
+                        <a href="#contact" class="btn"><i class="fas fa-users"></i> <span data-lang-ru="Запланировать съемку" data-lang-en="Schedule a Session" data-lang-sah="Уруһуйдааһыны былааннаа">Запланировать съемку</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -142,7 +217,7 @@
                 <p data-lang-ru="Профессиональный фотограф с более чем 7-летним опытом" data-lang-en="Professional photographer with over 7 years of experience" data-lang-sah="7 дьыл көрүүтээх идэтийбит уруһуйдьут">Профессиональный фотограф с более чем 7-летним опытом</p>
             </div>
             <div class="about-content">
-                <div class="about-img">Тут будет фото</div>
+                <div class="about-img"><img src="img/Photograph.jpg" alt="Фотограф Алексей Петров"></div>
                 <div class="about-text">
                     <p data-lang-ru="Меня зовут Алексей, я профессиональный фотограф из Якутска с более чем 7-летним опытом работы. Специализируюсь на создании эмоциональных и атмосферных фотографий, которые передают уникальность каждого момента." data-lang-en="My name is Alexey, I am a professional photographer from Yakutsk with over 7 years of experience. I specialize in creating emotional and atmospheric photographs that convey the uniqueness of every moment." data-lang-sah="Миигин аатым Алексей, мин Дьокуускайтан идэтийбит уруһуйдьутпун, 7-тэн тахса дьыл көрүүтээх. Дьиҥнээх хаартыскалары оҥорорго үөрэтэбин.">Меня зовут Алексей, я профессиональный фотограф из Якутска с более чем 7-летним опытом работы. Специализируюсь на создании эмоциональных и атмосферных фотографий, которые передают уникальность каждого момента.</p>
                     <p data-lang-ru="Мой стиль сочетает современные техники фотосъемки с элементами культурного наследия Якутии, что позволяет создавать по-настоящему уникальные кадры, наполненные душой и характером." data-lang-en="My style combines modern photography techniques with elements of Yakut cultural heritage, allowing me to create truly unique shots filled with soul and character." data-lang-sah="Мин стильбит саха култууратын уонна аныгы техникалары холбуур, идэһэлээх уонна ураты хаартыскалары оҥорор.">Мой стиль сочетает современные техники фотосъемки с элементами культурного наследия Якутии, что позволяет создавать по-настоящему уникальные кадры, наполненные душой и характером.</p>
@@ -165,9 +240,29 @@
                 <p data-lang-ru="Мнения людей о совместной работе" data-lang-en="People's opinions about working together" data-lang-sah="Дьон үлэ туһунан санаалара">Мнения людей о совместной работе</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card"><p data-lang-ru="&quot;Алексей сделал невероятные свадебные фотографии! Каждый кадр наполнен эмоциями и теплотой. Работали с ним легко и комфортно, он умеет создавать расслабленную атмосферу.&quot;" data-lang-en="&quot;Alexey created incredible wedding photos! Every shot is filled with emotions and warmth. Working with him was easy and comfortable, he knows how to create a relaxed atmosphere.&quot;" data-lang-sah="&quot;Алексей сэргэх кэргэнниир хаартыскалары оҥорбута! Хаартыска барыта иһиилээх уонна идэһэлээх. Кинилиин үлэлиир чэпчэки уонна комфортнай.&quot;">"Алексей сделал невероятные свадебные фотографии! Каждый кадр наполнен эмоциями и теплотой. Работали с ним легко и комфортно, он умеет создавать расслабленную атмосферу."</p><div class="testimonial-author"><div class="author-avatar">Фото</div><div><strong data-lang-ru="Анна и Дмитрий" data-lang-en="Anna and Dmitry" data-lang-sah="Анна уонна Дмитрий">Анна и Дмитрий</strong><p data-lang-ru="Свадебная съемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная съемка</p></div></div></div>
-                <div class="testimonial-card"><p data-lang-ru="&quot;Портретная сессия превзошла все ожидания! Алексей умеет найти лучший ракурс и создать расслабленную атмосферу во время съемки. Фотографии получились живыми и естественными.&quot;" data-lang-en="&quot;The portrait session exceeded all expectations! Alexey knows how to find the best angle and create a relaxed atmosphere during shooting. The photos turned out lively and natural.&quot;" data-lang-sah="&quot;Портрет сессия бары эрэлэ күүһүнэн туораата! Алексей ордук ракурсу булар уонна уруһуйдааһын кэмигэр чэпчэки куйааһыны оҥорор. Хаартыскалар олохтоох уонна чэпчэки буоллулар.&quot;">"Портретная сессия превзошла все ожидания! Алексей умеет найти лучший ракурс и создать расслабленную атмосферу во время съемки. Фотографии получились живыми и естественными."</p><div class="testimonial-author"><div class="author-avatar">Фото</div><div><strong data-lang-ru="Елена" data-lang-en="Elena" data-lang-sah="Елена">Елена</strong><p data-lang-ru="Портретная съемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная съемка</p></div></div></div>
-                <div class="testimonial-card"><p data-lang-ru="&quot;Семейные фото получились живыми и естественными. Дети чувствовали себя комфортно, и это видно на фотографиях. Спасибо за прекрасные воспоминания!&quot;" data-lang-en="&quot;The family photos turned out lively and natural. The children felt comfortable, and this is visible in the photos. Thank you for the wonderful memories!&quot;" data-lang-sah="&quot;Дьиэ кэргэн хаартыскалара олохтоох уонна чэпчэки буоллулар. Оҕолор бэйэлэрин чэпчэкитик тутаннар, хаартыскаларга көстөр. Кэрэ ахтыыларгар махтал!&quot;">"Семейные фото получились живыми и естественными. Дети чувствовали себя комфортно, и это видно на фотографиях. Спасибо за прекрасные воспоминания!"</p><div class="testimonial-author"><div class="author-avatar">Фото</div><div><strong data-lang-ru="Семья Ивановых" data-lang-en="Ivanov Family" data-lang-sah="Ивановтар дьиэ кэргэннэрэ">Семья Ивановых</strong><p data-lang-ru="Семейная съемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная съемка</p></div></div></div>
+                <div class="testimonial-card">
+                    <p data-lang-ru="&quot;Алексей сделал невероятные свадебные фотографии! Каждый кадр наполнен эмоциями и теплотой. Работали с ним легко и комфортно, он умеет создавать расслабленную атмосферу.&quot;" data-lang-en="&quot;Alexey created incredible wedding photos! Every shot is filled with emotions and warmth. Working with him was easy and comfortable, he knows how to create a relaxed atmosphere.&quot;" data-lang-sah="&quot;Алексей сэргэх кэргэнниир хаартыскалары оҥорбута! Хаартыска барыта иһиилээх уонна идэһэлээх. Кинилиин үлэлиир чэпчэки уонна комфортнай.&quot;">"Алексей сделал невероятные свадебные фотографии! Каждый кадр наполнен эмоциями и теплотой. Работали с ним легко и комфортно, он умеет создавать расслабленную атмосферу."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="img/AnnaDmitriy.jpg" alt="Анна и Дмитрий"></div>
+                        <div><strong data-lang-ru="Анна и Дмитрий" data-lang-en="Anna and Dmitry" data-lang-sah="Анна уонна Дмитрий">Анна и Дмитрий</strong><p data-lang-ru="Свадебная съемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная съемка</p></div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p data-lang-ru="&quot;Портретная сессия превзошла все ожидания! Алексей умеет найти лучший ракурс и создать расслабленную атмосферу во время съемки. Фотографии получились живыми и естественными.&quot;" data-lang-en="&quot;The portrait session exceeded all expectations! Alexey knows how to find the best angle and create a relaxed atmosphere during shooting. The photos turned out lively and natural.&quot;" data-lang-sah="&quot;Портрет сессия бары эрэлэ күүһүнэн туораата! Алексей ордук ракурсу булар уонна уруһуйдааһын кэмигэр чэпчэки куйааһыны оҥорор. Хаартыскалар олохтоох уонна чэпчэки буоллулар.&quot;">"Портретная сессия превзошла все ожидания! Алексей умеет найти лучший ракурс и создать расслабленную атмосферу во время съемки. Фотографии получились живыми и естественными."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="img/PortElena.jpg" alt="Елена"></div>
+                        <div><strong data-lang-ru="Елена" data-lang-en="Elena" data-lang-sah="Елена">Елена</strong><p data-lang-ru="Портретная съемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная съемка</p></div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p data-lang-ru="&quot;Семейные фото получились живыми и естественными. Дети чувствовали себя комфортно, и это видно на фотографиях. Спасибо за прекрасные воспоминания!&quot;" data-lang-en="&quot;The family photos turned out lively and natural. The children felt comfortable, and this is visible in the photos. Thank you for the wonderful memories!&quot;" data-lang-sah="&quot;Дьиэ кэргэн хаартыскалара олохтоох уонна чэпчэки буоллулар. Оҕолор бэйэлэрин чэпчэкитик тутаннар, хаартыскаларга көстөр. Кэрэ ахтыыларгар махтал!&quot;">"Семейные фото получились живыми и естественными. Дети чувствовали себя комфортно, и это видно на фотографиях. Спасибо за прекрасные воспоминания!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="img/FamilyPetrov.jpg" alt="Семья Ивановых"></div>
+                        <div><strong data-lang-ru="Семья Ивановых" data-lang-en="Ivanov Family" data-lang-sah="Ивановтар дьиэ кэргэннэрэ">Семья Ивановых</strong><p data-lang-ru="Семейная съемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная съемка</p></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -189,47 +284,18 @@
                 
                 <div class="contact-form">
                     <form id="contactForm" action="https://formsubmit.co/jjxzty@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="📸 НОВАЯ ЗАЯВКА с сайта ФотоЯкутия!">
+                        <input type="hidden" name="_subject" value="📸 НОВАЯ ЗАЯВКА с сайта ЯкутскийСвет!">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_ip" value="false">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_autoresponse" value="Спасибо за обращение! 📸 Я свяжусь с вами в ближайшее время. Хорошего дня!">
                         
-                        <div class="form-group">
-                            <label for="name" data-lang-ru="Ваше имя" data-lang-en="Your Name" data-lang-sah="Эн аатыҥ">Ваше имя</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Иван Иванов" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-lang-ru="Email" data-lang-en="Email" data-lang-sah="Email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="ivan@example.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" data-lang-ru="Телефон" data-lang-en="Phone" data-lang-sah="Телефон">Телефон</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service" data-lang-ru="Услуга" data-lang-en="Service" data-lang-sah="Үлэ">Услуга</label>
-                            <select id="service" name="service" class="form-control">
-                                <option value="Свадебная фотосъемка" data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</option>
-                                <option value="Портретная фотосъемка" data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</option>
-                                <option value="Семейная фотосъемка" data-lang-ru="Семейная фотосъемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</option>
-                                <option value="Коммерческая съемка" data-lang-ru="Коммерческая съемка" data-lang-en="Commercial photography" data-lang-sah="Эргиэн уруһуйдааһын">Коммерческая съемка</option>
-                                <option value="Другое" data-lang-ru="Другое" data-lang-en="Other" data-lang-sah="Атын">Другое</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" data-lang-ru="Сообщение" data-lang-en="Message" data-lang-sah="Сурук">Сообщение</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Расскажите о вашем проекте..." rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i>
-                            <span data-lang-ru="Отправить сообщение" data-lang-en="Send Message" data-lang-sah="Суругу ыыт">Отправить сообщение</span>
-                        </button>
+                        <div class="form-group"><label for="name" data-lang-ru="Ваше имя" data-lang-en="Your Name" data-lang-sah="Эн аатыҥ">Ваше имя</label><input type="text" id="name" name="name" class="form-control" placeholder="Иван Иванов" required></div>
+                        <div class="form-group"><label for="email" data-lang-ru="Email" data-lang-en="Email" data-lang-sah="Email">Email</label><input type="email" id="email" name="email" class="form-control" placeholder="ivan@example.com" required></div>
+                        <div class="form-group"><label for="phone" data-lang-ru="Телефон" data-lang-en="Phone" data-lang-sah="Телефон">Телефон</label><input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX"></div>
+                        <div class="form-group"><label for="service" data-lang-ru="Услуга" data-lang-en="Service" data-lang-sah="Үлэ">Услуга</label><select id="service" name="service" class="form-control"><option value="Свадебная фотосъемка" data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</option><option value="Портретная фотосъемка" data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</option><option value="Семейная фотосъемка" data-lang-ru="Семейная фотосъемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</option><option value="Коммерческая съемка" data-lang-ru="Коммерческая съемка" data-lang-en="Commercial photography" data-lang-sah="Эргиэн уруһуйдааһын">Коммерческая съемка</option><option value="Другое" data-lang-ru="Другое" data-lang-en="Other" data-lang-sah="Атын">Другое</option></select></div>
+                        <div class="form-group"><label for="message" data-lang-ru="Сообщение" data-lang-en="Message" data-lang-sah="Сурук">Сообщение</label><textarea id="message" name="message" class="form-control" placeholder="Расскажите о вашем проекте..." rows="5" required></textarea></div>
+                        <button type="submit" class="btn" style="width: 100%;"><i class="fas fa-paper-plane"></i> <span data-lang-ru="Отправить сообщение" data-lang-en="Send Message" data-lang-sah="Суругу ыыт">Отправить сообщение</span></button>
                     </form>
                 </div>
             </div>
@@ -239,31 +305,33 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about"><div class="footer-logo" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;"><img src="img/ssss.png" alt="ФотоЯкутия" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral);"><div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.8rem; color: var(--white);" data-lang-ru="ФотоЯкутия" data-lang-en="PhotoYakutia" data-lang-sah="ФотоДьокуускай">ФотоЯкутия</div></div><p data-lang-ru="Профессиональная фотосъемка в Якутске. Сохраняю уникальные моменты жизни через призму якутской эстетики. Более 7 лет опыта в создании эмоциональных и атмосферных фотографий." data-lang-en="Professional photography in Yakutsk. Preserving unique life moments through the lens of Yakut aesthetics. Over 7 years of experience in creating emotional and atmospheric photographs." data-lang-sah="Дьокуускайга идэтийбит уруһуйдааһын. Олох ураты кэмнэрин саха эстетикатынан харыстыыбын. 7 дьыл көрүүтээх уруһуйдьут.">Профессиональная фотосъемка в Якутске. Сохраняю уникальные моменты жизни через призму якутской эстетики. Более 7 лет опыта в создании эмоциональных и атмосферных фотографий.</p><div class="social-links"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a><a href="#" class="social-link"><i class="fab fa-vk"></i></a><a href="#" class="social-link"><i class="fab fa-telegram"></i></a><a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a></div></div>
+                <div class="footer-about"><div class="footer-logo" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;"><img src="img/ssss.png" alt="ЯкутскийСвет" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coral);"><div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.8rem; color: var(--white);" data-lang-ru="ЯкутскийСвет" data-lang-en="YakutLight" data-lang-sah="СахаСырдыга">ЯкутскийСвет</div></div><p data-lang-ru="Профессиональная фотосъемка в Якутске. Сохраняю уникальные моменты жизни через призму якутской эстетики. Более 7 лет опыта в создании эмоциональных и атмосферных фотографий." data-lang-en="Professional photography in Yakutsk. Preserving unique life moments through the lens of Yakut aesthetics. Over 7 years of experience in creating emotional and atmospheric photographs." data-lang-sah="Дьокуускайга идэтийбит уруһуйдааһын. Олох ураты кэмнэрин саха эстетикатынан харыстыыбын. 7 дьыл көрүүтээх уруһуйдьут.">Профессиональная фотосъемка в Якутске. Сохраняю уникальные моменты жизни через призму якутской эстетики. Более 7 лет опыта в создании эмоциональных и атмосферных фотографий.</p><div class="social-links"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a><a href="#" class="social-link"><i class="fab fa-vk"></i></a><a href="#" class="social-link"><i class="fab fa-telegram"></i></a><a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a></div></div>
                 <div class="footer-links"><h3 data-lang-ru="Навигация" data-lang-en="Navigation" data-lang-sah="Навигация">Навигация</h3><ul><li><a href="#home"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Главная" data-lang-en="Home" data-lang-sah="Сүрүн">Главная</span></a></li><li><a href="#portfolio"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Портфолио" data-lang-en="Portfolio" data-lang-sah="Портфолио">Портфолио</span></a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Услуги" data-lang-en="Services" data-lang-sah="Үлэлэр">Услуги</span></a></li><li><a href="#about"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Обо мне" data-lang-en="About" data-lang-sah="Миигин туһунан">Обо мне</span></a></li><li><a href="#contact"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Контакты" data-lang-en="Contact" data-lang-sah="Ситим">Контакты</span></a></li></ul></div>
                 <div class="footer-links"><h3 data-lang-ru="Услуги" data-lang-en="Services" data-lang-sah="Үлэлэр">Услуги</h3><ul><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Свадебная фотосъемка" data-lang-en="Wedding photography" data-lang-sah="Кэргэнниир уруһуйдааһын">Свадебная фотосъемка</span></a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Портретная фотосъемка" data-lang-en="Portrait photography" data-lang-sah="Портрет уруһуйдааһын">Портретная фотосъемка</span></a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Семейная фотосъемка" data-lang-en="Family photography" data-lang-sah="Дьиэ кэргэн уруһуйдааһын">Семейная фотосъемка</span></a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Коммерческая съемка" data-lang-en="Commercial photography" data-lang-sah="Эргиэн уруһуйдааһын">Коммерческая съемка</span></a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> <span data-lang-ru="Творческие проекты" data-lang-en="Creative projects" data-lang-sah="Айар проектар">Творческие проекты</span></a></li></ul></div>
                 <div class="footer-links"><h3 data-lang-ru="Контакты" data-lang-en="Contacts" data-lang-sah="Ситим">Контакты</h3><ul><li><i class="fas fa-map-marker-alt"></i> <span data-lang-ru="г. Якутск, ул. Ленина, 25" data-lang-en="Yakutsk, Lenina St., 25" data-lang-sah="Дьокуускай к., Ленина у., 25">г. Якутск, ул. Ленина, 25</span></li><li><i class="fas fa-phone"></i> +7 (914) 123-45-67</li><li><i class="fas fa-envelope"></i> photo@yakutia.ru</li><li><i class="fas fa-clock"></i> <span data-lang-ru="Пн-Пт: 9:00-18:00" data-lang-en="Mon-Fri: 9:00-18:00" data-lang-sah="Бн-Пт: 9:00-18:00">Пн-Пт: 9:00-18:00</span></li></ul></div>
             </div>
-            <div class="copyright"><p data-lang-ru="&copy; 2025 ФотоЯкутия. Все права защищены. | Разработано с ❤️ для ваших лучших моментов" data-lang-en="&copy; 2025 PhotoYakutia. All rights reserved. | Developed with ❤️ for your best moments" data-lang-sah="&copy; 2025 ФотоДьокуускай. Бары бырааптар көмүскэнэллэр. | ❤️ кытта эн ордук кэрэ кэмнэргэр анаан">&copy; 2025 ФотоЯкутия. Все права защищены. | Разработано с <i class="fas fa-heart" style="color: var(--coral);"></i> для ваших лучших моментов</p></div>
+            <div class="copyright"><p data-lang-ru="&copy; 2025 ЯкутскийСвет. Все права защищены. | Разработано с ❤️ для ваших лучших моментов" data-lang-en="&copy; 2025 YakutLight. All rights reserved. | Developed with ❤️ for your best moments" data-lang-sah="&copy; 2025 СахаСырдыга. Бары бырааптар көмүскэнэллэр. | ❤️ кытта эн ордук кэрэ кэмнэргэр анаан">&copy; 2025 ЯкутскийСвет. Все права защищены. | Разработано с <i class="fas fa-heart" style="color: var(--coral);"></i> для ваших лучших моментов</p></div>
         </div>
     </footer>
 
     <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
-    <!-- Tawk.to Чат (добавлено) -->
+    <!-- Tawk.to Чат -->
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69d7432f66239b1c36ac7780/1jlodssrb';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69d7432f66239b1c36ac7780/1jlodssrb';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
     </script>
-    <!--End of Tawk.to Script-->
 
     <script src="script.js"></script>
 </body>
