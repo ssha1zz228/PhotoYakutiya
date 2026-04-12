@@ -48,10 +48,11 @@
             border-radius: 50%;
             object-fit: cover;
         }
+        /* Hero фон с фото background.jpg */
         .hero {
-            background: linear-gradient(rgba(26, 42, 58, 0.7), rgba(26, 42, 58, 0.8)), url('img/photographer-bg.jpg');
+            background: linear-gradient(135deg, rgba(26, 42, 58, 0.75) 0%, rgba(42, 74, 106, 0.85) 100%), url('img/background.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center 30%;
             background-attachment: fixed;
         }
     </style>
@@ -142,7 +143,7 @@
                 <button class="filter-btn" data-filter="family" data-lang-ru="Семейные" data-lang-en="Family" data-lang-sah="Дьиэ кэргэннээх">Семейные</button>
                 <button class="filter-btn" data-filter="commercial" data-lang-ru="Коммерческие" data-lang-en="Commercial" data-lang-sah="Эргиэн">Коммерческие</button>
             </div>
-            <div class="portfolio-grid"></div> <!-- Сюда JS добавит карточки -->
+            <div class="portfolio-grid"></div>
         </div>
     </section>
 
@@ -317,20 +318,16 @@
     <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
     <!-- Tawk.to Чат -->
-    <!--Start of Tawk.to Script-->
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69d7432f66239b1c36ac7780/1jlodssrb';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69d7432f66239b1c36ac7780/1jlodssrb';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
     </script>
 
     <script src="script.js"></script>
