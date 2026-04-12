@@ -85,14 +85,14 @@ function handleBackToTop() {
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ========== ПОРТФОЛИО С ФОТОГРАФИЯМИ ==========
+// ========== ПОРТФОЛИО С ФОТОГРАФИЯМИ (ОБНОВЛЕНО) ==========
 const portfolioItems = [
     { category: 'wedding', titleRu: 'Свадьба Анны и Дмитрия', titleEn: 'Anna and Dmitry Wedding', titleSah: 'Анна уонна Дмитрий кэргэнниир', descRu: 'Анна и Дмитрий', descEn: 'Anna and Dmitry', descSah: 'Анна уонна Дмитрий', img: 'img/AnnaDmitriy.jpg' },
     { category: 'portrait', titleRu: 'Портрет Елены', titleEn: 'Portrait of Elena', titleSah: 'Елена портрета', descRu: 'Елена', descEn: 'Elena', descSah: 'Елена', img: 'img/PortElena.jpg' },
     { category: 'family', titleRu: 'Семья Петровых', titleEn: 'Petrov Family', titleSah: 'Петровтар дьиэ кэргэннэрэ', descRu: 'Семья Петровых', descEn: 'Petrov Family', descSah: 'Петровтар дьиэ кэргэннэрэ', img: 'img/FamilyPetrov.jpg' },
-    { category: 'wedding', titleRu: 'Свадебный портрет', titleEn: 'Wedding Portrait', titleSah: 'Кэргэнниир портрет', descRu: 'Мария и Алексей', descEn: 'Maria and Alexey', descSah: 'Мария уонна Алексей', img: 'img/AnnaDmitriy.jpg' },
-    { category: 'portrait', titleRu: 'Мужской портрет', titleEn: 'Male Portrait', titleSah: 'Эр киһи портрета', descRu: 'Андрей', descEn: 'Andrey', descSah: 'Андрей', img: 'img/PortElena.jpg' },
-    { category: 'commercial', titleRu: 'Коммерческая съемка', titleEn: 'Commercial Shoot', titleSah: 'Эргиэн уруһуйдааһын', descRu: 'Для бренда одежды', descEn: 'For clothing brand', descSah: 'Таҥас брэндээххэ', img: 'img/FamilyPetrov.jpg' }
+    { category: 'wedding', titleRu: 'Свадебный портрет Марии и Алексея', titleEn: 'Wedding Portrait Maria and Alexey', titleSah: 'Мария уонна Алексей кэргэнниир портрета', descRu: 'Мария и Алексей', descEn: 'Maria and Alexey', descSah: 'Мария уонна Алексей', img: 'img/WeddingMaria.jpg' },
+    { category: 'portrait', titleRu: 'Мужской портрет Андрея', titleEn: 'Male Portrait Andrey', titleSah: 'Андрей эр киһи портрета', descRu: 'Андрей', descEn: 'Andrey', descSah: 'Андрей', img: 'img/PortraitAndrey.jpg' },
+    { category: 'commercial', titleRu: 'Коммерческая съемка для бренда', titleEn: 'Commercial Shoot for Brand', titleSah: 'Брэндээххэ эргиэн уруһуйдааһын', descRu: 'Для бренда одежды', descEn: 'For clothing brand', descSah: 'Таҥас брэндээххэ', img: 'img/CommercialBrand.jpg' }
 ];
 
 const portfolioGrid = document.querySelector('.portfolio-grid');
