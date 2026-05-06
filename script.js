@@ -209,10 +209,3 @@ function updateActiveButton(activeBtn) {
     document.querySelectorAll('.accessibility-btn').forEach(btn => btn.classList.remove('active'));
     activeBtn.classList.add('active');
 }
-
-// ========== ЗАПУСК ==========
-document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    handleBackToTop();
-    handleScrollAnimations();
-});
