@@ -1273,3 +1273,123 @@ footer {
         width: 180px;
     }
 }
+.contact-single-card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.modern-form .form-row {
+    margin-bottom: 20px;
+}
+
+.modern-form .form-group.full-width {
+    width: 100%;
+}
+
+.modern-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.modern-form input,
+.modern-form select,
+.modern-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+.form-contacts-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-divider {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-divider span {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+}
+
+.footer-phone {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6B6B;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.footer-messengers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-messenger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.max-btn {
+    background: #2D3748;
+}
+
+.vk-btn {
+    background: #4C75A3;
+}
+
+.required {
+    color: red;
+}
